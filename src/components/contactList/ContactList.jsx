@@ -63,7 +63,7 @@ const ContactList = () => {
               <Card user={user} key={user.id} />
             ))}
             {contact2.map((user) => (
-              <Card user={user} key={user.id} />
+              <Card user={user} key={user.id} disable={true} />
             ))}
           </div>}
       </section>
