@@ -1,9 +1,53 @@
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Input from '../../common/ui/Input'
+import { useState } from 'react'
+import { ContactService } from '../../services/ContactService';
+import { Loader } from 'lucide-react';
 
 const AddContact = () => {
-  
+  const navigate = useNavigate()
+
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    photo: "",
+    address: "",
+    company: "",
+    description: "",
+    group: "",
+
+  });
+  const [loader, setLoader] = useState(false);
+
+  const inputHandler = (e) => {
+    const { name, value } = e.target
+    setUser(prev => ({
+      ...prev,
+      [name]: value
+    }))
+
+    console.log(user);
+
+  }
+
+  const formHandler = async (e) => {
+    e.preventDefault();
+    console.log(user);
+    try {
+      setLoader(true);
+      const res = await ContactService.createContact(user)
+      alert("Contact Created!!!")
+      navigate("/")
+      console.log(res);
+      setTimeout(setLoader(false), 4000);
+    } catch (error) {
+      setLoader(false);
+      console.log(error);
+    }
+  }
+
   return (
     <>
       <section className="container p-3">
@@ -15,7 +59,7 @@ const AddContact = () => {
           voluptatibus quasi, quam mollitia?
         </p>
         <div className="row">
-          <div className="col-md-4">
+          <form className="col-md-4" onSubmit={formHandler}>
             <div className="mb-2">
               <Input
                 type="text"
@@ -23,6 +67,9 @@ const AddContact = () => {
                 placeholder="John Cena"
                 name="name"
                 id="name"
+                value={user.name}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
@@ -30,8 +77,11 @@ const AddContact = () => {
                 type="text"
                 label="Photo URL"
                 placeholder="https://photoURL.com"
-                name="Photo"
-                id="Photo"
+                name="photo"
+                id="photo"
+                value={user.photo}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
@@ -41,6 +91,9 @@ const AddContact = () => {
                 placeholder="exmple@john.com"
                 name="email"
                 id="email"
+                value={user.email}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
@@ -50,6 +103,9 @@ const AddContact = () => {
                 placeholder="0123456789"
                 name="phone"
                 id="phone"
+                value={user.phone}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
@@ -57,8 +113,11 @@ const AddContact = () => {
                 type="text"
                 label="contact"
                 placeholder="Bangalore, karnataka, 5600056"
-                name="contact"
+                name="address"
                 id="contact"
+                value={user.address}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
@@ -66,8 +125,11 @@ const AddContact = () => {
                 type="text"
                 label="Company"
                 placeholder="Tek Pyramid"
-                name="Company"
+                name="company"
                 id="Company"
+                value={user.company}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
@@ -75,8 +137,11 @@ const AddContact = () => {
                 type="text"
                 label="Description"
                 placeholder="About this person"
-                name="Description"
+                name="description"
                 id="Description"
+                value={user.description}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
@@ -84,19 +149,23 @@ const AddContact = () => {
                 type="text"
                 label="Group"
                 placeholder="Group"
-                name="Group"
+                name="group"
                 id="Group"
+                value={user.group}
+                onChange={inputHandler}
+                required={true}
               />
             </div>
             <div className="mb-2">
-              <Link className="btn btn-dark" to="/">
+              <Link className="btn btn-dark" to="/" >
                 Cancel
               </Link>
-              <Link className="btn btn-primary ms-2" to="/">
+              {loader ? <Loader /> : <button type='submit' className="btn btn-primary ms-2" >
                 Create
-              </Link>
+              </button>}
+
             </div>
-          </div>
+          </form>
         </div>
       </section>
     </>

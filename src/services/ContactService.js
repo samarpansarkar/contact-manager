@@ -23,4 +23,10 @@ export class ContactService {
     const res = await axios.get(dataURL);
     return res.data;
   }
+
+  static async createContact(userData) {
+    const dataURL = `${this.SERVER_URL}/contacts`;
+    const res = await axios.post(dataURL, userData);
+    return res.data;
+  }
 }

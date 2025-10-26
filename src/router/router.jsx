@@ -17,6 +17,10 @@ export const router = createBrowserRouter([
                 element: <ContactList />
             },
             {
+                path: '/add',
+                element: <AddContact />
+            },
+            {
                 path: '/view/:contactID',
                 element: <ViewContact />
             }

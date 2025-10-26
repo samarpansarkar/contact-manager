@@ -6,7 +6,8 @@ const Input = ({
   label,
   placeholder,
   onChange,
-  onClick,
+  // onClick,
+  required,
   ...props
 }) => {
   return (
@@ -21,6 +22,7 @@ const Input = ({
         onChange={onChange}
         // onClick={onClick}
         {...props}
+        required={required}
       />
     </>
   );
