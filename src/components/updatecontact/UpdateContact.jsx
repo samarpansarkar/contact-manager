@@ -134,7 +134,7 @@ const UpdateContact = () => {
                 Cancel
               </Link>
               <Link className="btn btn-success ms-2" to="/">
-                Create
+                Update
               </Link>
             </div>
           </div>

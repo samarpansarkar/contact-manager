@@ -1,8 +1,202 @@
 {
-    "contacts":[
-        {
-            "name":"ajay",
-            "email":"ajay01@gmail.com"
-        }
-    ]
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Abhijit Kumar",
+      "photo": "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
+      "email": "abhijit@example.com",
+      "phone": "9876543210",
+      "contact": "Bangalore, Karnataka, 560056",
+      "company": "Tek Pyramid",
+      "description": "Front-end Developer with 2 years of experience.",
+      "group": "Work Friends"
+    },
+    {
+      "id": 2,
+      "name": "Priya Sharma",
+      "photo": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+      "email": "priya.sharma@example.com",
+      "phone": "9123456780",
+      "contact": "Pune, Maharashtra, 411001",
+      "company": "Infosys",
+      "description": "UI/UX Designer passionate about clean interfaces.",
+      "group": "Design Team"
+    },
+    {
+      "id": 3,
+      "name": "Ravi Patel",
+      "photo": "https://images.unsplash.com/photo-1599566150163-29194dcaad36",
+      "email": "ravi.patel@example.com",
+      "phone": "9823412765",
+      "contact": "Ahmedabad, Gujarat, 380015",
+      "company": "Wipro",
+      "description": "Back-end Developer specialized in Node.js.",
+      "group": "Developers"
+    },
+    {
+      "id": 4,
+      "name": "Sneha Reddy",
+      "photo": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39",
+      "email": "sneha.reddy@example.com",
+      "phone": "9965342178",
+      "contact": "Hyderabad, Telangana, 500081",
+      "company": "Tech Mahindra",
+      "description": "React Developer with strong UI focus.",
+      "group": "Work Friends"
+    },
+    {
+      "id": 5,
+      "name": "Amit Verma",
+      "photo": "https://images.unsplash.com/photo-1614289371518-0d9c54d0b3a1",
+      "email": "amit.verma@example.com",
+      "phone": "9876532109",
+      "contact": "Delhi, Delhi, 110092",
+      "company": "TCS",
+      "description": "Software Engineer passionate about automation.",
+      "group": "Colleagues"
+    },
+    {
+      "id": 6,
+      "name": "Neha Gupta",
+      "photo": "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
+      "email": "neha.gupta@example.com",
+      "phone": "9643125789",
+      "contact": "Lucknow, Uttar Pradesh, 226010",
+      "company": "HCL Technologies",
+      "description": "Full Stack Developer experienced in MERN stack.",
+      "group": "Developers"
+    },
+    {
+      "id": 7,
+      "name": "Vikram Singh",
+      "photo": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6",
+      "email": "vikram.singh@example.com",
+      "phone": "9821374567",
+      "contact": "Jaipur, Rajasthan, 302005",
+      "company": "Capgemini",
+      "description": "Project Manager with strong leadership skills.",
+      "group": "Management"
+    },
+    {
+      "id": 8,
+      "name": "Ayesha Khan",
+      "photo": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+      "email": "ayesha.khan@example.com",
+      "phone": "9087654321",
+      "contact": "Mumbai, Maharashtra, 400067",
+      "company": "Cognizant",
+      "description": "Front-end Developer focusing on performance.",
+      "group": "Work Friends"
+    },
+    {
+      "id": 9,
+      "name": "Rohit Mehta",
+      "photo": "https://images.unsplash.com/photo-1603415526960-f7e0328d11e2",
+      "email": "rohit.mehta@example.com",
+      "phone": "9786543212",
+      "contact": "Chandigarh, Punjab, 160017",
+      "company": "Mindtree",
+      "description": "QA Engineer with automation testing expertise.",
+      "group": "Testing Team"
+    },
+    {
+      "id": 10,
+      "name": "Kritika Das",
+      "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      "email": "kritika.das@example.com",
+      "phone": "9876123450",
+      "contact": "Kolkata, West Bengal, 700019",
+      "company": "IBM",
+      "description": "Front-end Developer specializing in accessibility.",
+      "group": "Developers"
+    },
+    {
+      "id": 11,
+      "name": "Arjun Nair",
+      "photo": "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
+      "email": "arjun.nair@example.com",
+      "phone": "9678123456",
+      "contact": "Kochi, Kerala, 682016",
+      "company": "Accenture",
+      "description": "Cloud Engineer with AWS certification.",
+      "group": "Work Friends"
+    },
+    {
+      "id": 12,
+      "name": "Ritika Sen",
+      "photo": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+      "email": "ritika.sen@example.com",
+      "phone": "9745632189",
+      "contact": "Bhubaneswar, Odisha, 751001",
+      "company": "Infosys",
+      "description": "React Developer with passion for animations.",
+      "group": "Design Team"
+    },
+    {
+      "id": 13,
+      "name": "Siddharth Joshi",
+      "photo": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7",
+      "email": "siddharth.joshi@example.com",
+      "phone": "9123876543",
+      "contact": "Indore, Madhya Pradesh, 452001",
+      "company": "L&T Infotech",
+      "description": "Database Engineer specializing in MongoDB.",
+      "group": "Developers"
+    },
+    {
+      "id": 14,
+      "name": "Tanya Kapoor",
+      "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      "email": "tanya.kapoor@example.com",
+      "phone": "9587364120",
+      "contact": "Gurgaon, Haryana, 122018",
+      "company": "Paytm",
+      "description": "UI Designer with creative visual design skills.",
+      "group": "Design Team"
+    },
+    {
+      "id": 15,
+      "name": "Karan Malhotra",
+      "photo": "https://images.unsplash.com/photo-1603415526960-f7e0328d11e2",
+      "email": "karan.malhotra@example.com",
+      "phone": "9876102345",
+      "contact": "Noida, Uttar Pradesh, 201301",
+      "company": "Adobe",
+      "description": "Front-end Engineer focused on performance optimization.",
+      "group": "Work Friends"
+    },
+    {
+      "id": 16,
+      "name": "Divya Rao",
+      "photo": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9",
+      "email": "divya.rao@example.com",
+      "phone": "9987456321",
+      "contact": "Chennai, Tamil Nadu, 600018",
+      "company": "Zoho",
+      "description": "React Developer passionate about clean code.",
+      "group": "Developers"
+    },
+    {
+      "id": 17,
+      "name": "Harsh Jain",
+      "photo": "https://images.unsplash.com/photo-1603415526960-f7e0328d11e2",
+      "email": "harsh.jain@example.com",
+      "phone": "9721456789",
+      "contact": "Bhopal, Madhya Pradesh, 462016",
+      "company": "Oracle",
+      "description": "Software Engineer working on enterprise systems.",
+      "group": "Colleagues"
+    },
+    {
+      "id": 18,
+      "name": "Meera Iyer",
+      "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      "email": "meera.iyer@example.com",
+      "phone": "9832145678",
+      "contact": "Mysore, Karnataka, 570010",
+      "company": "Infosys",
+      "description": "Frontend Engineer with expertise in TailwindCSS.",
+      "group": "Work Friends"
+    }
+  ]
 }

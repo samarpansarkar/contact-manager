@@ -3,24 +3,29 @@ import ContactList from "../components/contactList/ContactList";
 import Navbar from "../common/ui/Navbar";
 import AddContact from "../components/addcontact/AddContact";
 import UpdateContact from "../components/updatecontact/UpdateContact";
+import ViewContact from "../components/ViewContact/ViewContact";
 
-export const router=createBrowserRouter([
+export const router = createBrowserRouter([
     {
-    path:'/',
-    element:<Navbar/>,
-    children:[
-        {
-            index:true,
-            element:<ContactList/>
-        }
-        ,{
-            path:'/add',
-            element:<AddContact/>
-        },
-        {
-            path:"/edit",
-            element:<UpdateContact/>
-        }
-    ]
+        path: '/',
+        element: <Navbar />,
+        children: [
+            {
+                index: true,
+                element: <ContactList />
+            },
+            {
+                path: '/contact/:contactID',
+                element: <ViewContact />
+            }
+            , {
+                path: '/add/:contactID',
+                element: <AddContact />
+            },
+            {
+                path: "/edit/:contactID",
+                element: <UpdateContact />
+            }
+        ]
     }
 ])
