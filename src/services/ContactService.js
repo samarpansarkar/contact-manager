@@ -17,4 +17,10 @@ export class ContactService {
     const res = await axios.get(dataURL);
     return res.data;
   }
+
+  static async getContact(constactID) {
+    const dataURL = `${this.SERVER_URL}/contacts/${constactID}`;
+    const res = await axios.get(dataURL);
+    return res.data;
+  }
 }
