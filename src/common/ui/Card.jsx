@@ -1,43 +1,48 @@
-
 import { Link } from "react-router-dom";
+import diffProfile from '../../assets/defultProfilePic.png'
 
 const Card = ({ user }) => {
   return (
-    <>
-      <section className="container my-3 bg-">
-        <div className="row">
-          <div className="col-md-6 border p-3 rounded">
-            <div className="row d-flex justify-content-around align-items-center">
-              <div className="col-md-3">
-                <img className="col-md-12 rounded"
-                  src={user.photo}
-                  alt="No Image!!!"
-                />
-              </div>
-              <div className="col-md-7">
-                <ul className="list-group">
-                  <li className="list-group-item list-group-item-active">
-                    Name: {user?.name}
-                  </li>
-                  <li className="list-group-item list-group-item-active">
-                    Email:{user?.email}
-                  </li>
-                  <li className="list-group-item list-group-item-active">
-                    Contact:8989898989
-                  </li>
-                </ul>
-              </div>
-              <div className="col-md-2 d-flex flex-column ">
-                <Link className="btn btn-warning my-1" to="/view"><i className="fa fa-eye"></i></Link>
-                <Link className="btn btn-primary my-1" to="/edit"><i className="fa fa-pen"></i></Link>
-                <button className="btn btn-danger"><i className="fa fa-trash"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center justify-between hover:shadow-lg transition-shadow duration-300 text-center">
+      {/* Profile Image */}
+      <img
+        src={user.photo ? user.photo : diffProfile}
+        alt={user.name || "No Image"}
+        className="w-24 h-24 object-cover rounded-full border mb-3"
+      />
 
-    </>
+      {/* User Info */}
+      <div className="w-full">
+        <p className="font-semibold text-lg text-gray-800 mb-1">
+          Name: {user?.name}
+        </p>
+        <p className="text-gray-600 text-sm truncate">
+          Email: {user?.email}
+        </p>
+        <p className="text-gray-600 text-sm">
+          Contact: {user?.phone || "N/A"}
+        </p>
+      </div>
+
+      {/* Action Buttons */}
+      <div className="flex gap-2 mt-4">
+        <Link
+          className="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-2 rounded-lg transition"
+          to="/view/:"
+        >
+          <i className="fa fa-eye"></i>
+        </Link>
+        <Link
+          className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg transition"
+          to="/edit"
+        >
+          <i className="fa fa-pen"></i>
+        </Link>
+        <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-lg transition">
+          <i className="fa fa-trash"></i>
+        </button>
+      </div>
+    </div>
   );
 };
 

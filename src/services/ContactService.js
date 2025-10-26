@@ -1,16 +1,20 @@
 import axios from "axios";
 
+export class AllContactFromJSONServer {
+  static SERVER_URL = "https://jsonplaceholder.typicode.com/users";
+
+  static async AllContact() {
+    const res = await axios.get(this.SERVER_URL);
+    return res.data;
+  }
+}
+
 export class ContactService {
   static SERVER_URL = `http://localhost:7000`;
 
   static async getAllContact() {
     const dataURL = `${this.SERVER_URL}/contacts`;
-    try {
-      const res = await axios.get(dataURL);
-      return res.data;
-    } catch (error) {
-      console.error("Error fetching contacts:", error);
-      throw error;
-    }
+    const res = await axios.get(dataURL);
+    return res.data;
   }
 }
