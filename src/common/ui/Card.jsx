@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import diffProfile from '../../assets/defultProfilePic.png'
 
 const Card = ({ user, disable }) => {
+
   return (
     <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center justify-between hover:shadow-lg transition-shadow duration-300 text-center">
 
